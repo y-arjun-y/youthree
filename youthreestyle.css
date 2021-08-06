@@ -1,0 +1,466 @@
+/* General */
+body {
+  background-color: #fefbea;
+  overflow-x: hidden;
+}
+
+#nostylelink {
+  text-decoration: none;
+  color: unset;
+}
+
+/* Opening */
+#opening {
+  padding: 25vh 0;
+  font-family: "Space Mono";
+  text-align: center;
+  margin-top: auto;
+}
+
+#openingheading {
+  opacity: 0;
+}
+
+.openingtext {
+  opacity: 0;
+}
+
+#openingbutton {
+  position: relative;
+  left: -100em;
+  opacity: 0;
+  cursor: pointer;
+  border: none;
+  padding: 0.5em;
+  font-family: "Space Mono";
+  background-color: #03fc35;
+  margin-top: 0.7em;
+  font-size: 2em;
+}
+
+/* Countries */
+.countries-custom-select-wrapper {
+  position: relative;
+  user-select: none;
+  width: 20%;
+}
+
+.countries-custom-select {
+  font-family: "Space Mono";
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-width: 0 2px 0 2px;
+  border-style: solid;
+  border-color: #fefbea;
+}
+
+.countries-custom-select__trigger {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 22px;
+  font-size: 20px;
+  font-weight: 300;
+  color: #3b3b3b;
+  height: 60px;
+  line-height: 60px;
+  background: #fefbea;
+  cursor: pointer;
+  border-width: 2px 0 2px 0;
+  border-style: solid;
+  border-color: #fefbea;
+}
+
+.countries-custom-options {
+  position: absolute;
+  display: block;
+  top: 100%;
+  left: 0;
+  right: 0;
+  border: 2px solid #fefbea;
+  border-top: 0;
+  background: #fefbea;
+  transition: all 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.countries-custom-select.open .countries-custom-options {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
+
+.countries-custom-option {
+  font-family: "Space Mono";
+  position: relative;
+  display: block;
+  padding-top: 0px;
+  padding-right: 102px;
+  padding-bottom: 0px;
+  padding-left: 8px;
+  right: -13px;
+  width: 35%;
+  white-space: nowrap;
+  font-size: 22px;
+  font-weight: 300;
+  color: black;
+  line-height: 60px;
+  cursor: pointer;
+  transition: all 0.5s;
+  background-color: #fefbea;
+}
+
+.countries-custom-option:hover {
+  cursor: pointer;
+  background-color: #fcefb6;
+}
+
+.countries-custom-option.selected {
+  white-space: nowrap;
+  color: black;
+  background-color: #ffeab5;
+}
+
+.countries-unemployment-data-custom-option {
+  font-family: "Space Mono";
+  position: relative;
+  display: block;
+  padding-top: 0px;
+  padding-right: 102px;
+  padding-bottom: 0px;
+  padding-left: 8px;
+  right: -13px;
+  width: 0%;
+  white-space: nowrap;
+  font-size: 22px;
+  font-weight: 300;
+  color: black;
+  line-height: 60px;
+  cursor: pointer;
+  transition: all 0.5s;
+  background-color: #fefbea;
+}
+
+.countries-arrow {
+  position: relative;
+  height: 14.8px;
+  width: 1000px;
+  margin-left: 1.5em;
+}
+
+.countries-arrow::before,
+.countries-arrow::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  width: 0.15rem;
+  height: 100%;
+  transition: all 0.3s;
+}
+
+.countries-arrow::before {
+  left: -4.8px;
+  transform: rotate(45deg);
+  background-color: black;
+}
+
+.countries-arrow::after {
+  left: 4.8px;
+  transform: rotate(-45deg);
+  background-color: black;
+}
+
+.open .countries-arrow::before {
+  left: -4.8px;
+  transform: rotate(-45deg);
+}
+
+.open .countries-arrow::after {
+  left: 4.8px;
+  transform: rotate(45deg);
+}
+
+.none {
+  display: none;
+}
+
+.countries-span {
+  white-space: nowrap;
+}
+
+/* Unemployment */
+.countries-unemployment-div {
+  font-family: "Space Mono";
+}
+
+.countries-unemployment-heading {
+  margin-left: 22px;
+  font-size: 1.8em;
+}
+
+.countries-unemployment-u-list {
+  list-style: none;
+  font-size: 2em;
+  white-space: nowrap;
+}
+
+.soon {
+  margin-left: 22px;
+  font-size: 1.8em;
+}
+
+.countries-mathjax {
+  display: inline;
+}
+
+/* Tooltip */
+.countries-tooltip {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.countries-tooltip .countries-tooltip-text {
+  visibility: hidden;
+  background-color: #fcefb6;
+  color: black;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  font-size: 0.5em;
+  margin-left: -60px;
+  opacity: 0;
+  white-space: nowrap;
+  transition: opacity 0.3s;
+}
+
+.countries-tooltip .countries-tooltip-text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50px;
+  margin-left: -4.8px;
+  border-width: 4.8px;
+  border-style: solid;
+  border-color: #fcefb6 transparent transparent transparent;
+}
+
+.countries-tooltip:hover .countries-tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Disclaimer */
+#disclaimer {
+  font-family: "Space Mono";
+  text-align: center;
+  font-size: 1.3em;
+}
+
+#disclaimercopyright {
+  font-family: "Roboto";
+}
+
+#disclaimer a {
+  color: black;
+}
+
+/* Inspiration */
+#inspiration {
+  font-family: "Space Mono";
+  text-align: center;
+  font-size: 1.3em;
+}
+
+#inspiration a {
+  color: black;
+}
+
+/* #inspirationiframe {
+  width: 100%;
+  float: left;
+  text-align: center;
+}
+
+iframe {
+  width: 100px;
+  height: 290px;
+  margin: 0 auto;
+  background-color: #777;
+} */
+
+/* Other Divisions */
+.countries-unemployment-rate-data-div {
+  display: flex;
+  gap: 10em;
+}
+
+.countries-unemployment-data-source-div {
+  position: relative;
+  bottom: -0.8em;
+  margin-bottom: 2em;
+}
+
+.countries-unemployment-data-source-div a {
+  color: unset;
+}
+
+.countries-unemployment-data-source-div a:hover {
+  color: #001aff;
+}
+
+/* Graph */
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.line {
+  fill: none;
+  stroke: #001aff;
+  stroke-width: 3px;
+}
+
+.overlay {
+  fill: none;
+  pointer-events: all;
+}
+
+.focus circle {
+  fill: black;
+}
+
+.focus text {
+  font-size: 14px;
+}
+
+.countries-tooltip {
+  fill: #fefbea;
+  stroke: #000;
+}
+
+.countries-tooltip-date,
+.countries-tooltip-u1,
+.countries-tooltip-u2,
+.countries-tooltip-u3,
+.countries-tooltip-u4,
+.countries-tooltip-u5,
+.countries-tooltip-u6 {
+  font-weight: bold;
+}
+
+/* Footer */
+#footer {
+  display: flex;
+  position: absolute;
+  font-family: "Roboto";
+  font-size: 1.3em;
+  left: 0;
+  bottom: -3px;
+  gap: 1em;
+  margin-left: 0.5em;
+  white-space: nowrap;
+}
+
+.footerextra {
+  font-family: "Space Mono";
+  position: relative;
+  bottom: 2px;
+}
+
+.footerextra a {
+  color: unset;
+}
+
+#footerdot {
+  color: #001aff;
+}
+
+/* Responsiveness */
+@media (max-width: 1060px) {
+  #opening {
+    padding: 10vh 0;
+    font-size: 0.8em;
+  }
+
+  #footer {
+    font-size: 1em;
+  }
+
+  .footerextra {
+    bottom: -2px;
+  }
+
+  .countries-unemployment-div {
+    font-size: 12px;
+    padding: 0;
+  }
+
+  .svg-graph {
+    transform: scale(0.45);
+    position: relative;
+    right: 34em;
+    bottom: 11em;
+  }
+
+  .countries-unemployment-heading {
+    font-size: 1.5em;
+  }
+
+  .countries-custom-option:hover {
+    width: 4.3em;
+  }
+
+  .countries-custom-option.selected {
+    width: 4.3em;
+  }
+
+  .countries-custom-option {
+    width: 4.3em;
+  }
+
+  .countries-unemployment-u-list {
+    text-align: center;
+    padding-right: 2.2em;
+  }
+
+  .countries-tooltip .countries-tooltip-text {
+    white-space: pre-line;
+  }
+
+  .countries-unemployment-rate-data-div {
+    display: block;
+  }
+
+  .countries-unemployment-data-source-div {
+    margin-left: 2em;
+  }
+}
+
+@media (max-width: 1374px) {
+  .countries-unemployment-u-graph-div {
+    left: 3%;
+  }
+}
+
+@media (max-width: 1333px) {
+  .countries-arrow-2 {
+    position: relative;
+    left: -224.8px;
+  }
+}

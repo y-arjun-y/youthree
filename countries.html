@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:locale" content="en_US" />
+    <meta
+      name="robots"
+      content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    />
+    <meta property="og:title" content="youthree" />
+    <meta
+      property="og:url"
+      content="https://arjunyadav.net/projects/youthree/countries"
+    />
+    <meta property="og:site_name" content="Arjun Yadav" />
+    <meta
+      property="og:image"
+      content="https://arjunyadav.net/assets/youthreecover.png"
+    />
+    <meta property="og:image:width" content="681" />
+    <meta property="og:image:height" content="342" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="youthree" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>youthree</title>
+    <link ref="stylesheet" href="youthreestyle.css" />
+    <link rel="icon" href="/assets/youthreefavicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="youthreestyle.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Space+Mono"
+    />
+  </head>
+  <body>
+    <div class="countries-custom-select-wrapper">
+      <div class="countries-custom-select">
+        <div class="countries-custom-select__trigger">
+          <span class="countries-span">Select a country</span>
+          <div class="countries-arrow"></div>
+        </div>
+        <div class="countries-custom-options">
+          <span class="countries-custom-option selected none"
+            >https://arjunyadav.net/projects/youthree/countries</span
+          >
+          <span class="countries-custom-option">🇺🇸 U.S.A.</span>
+          <span class="countries-custom-option">🇬🇧 U.K.</span>
+          <span class="countries-custom-option">🇨🇦 Canada</span>
+          <span class="countries-custom-option">🇩🇪 Germany</span>
+          <span class="countries-custom-option">🇳🇿 New Zealand</span>
+          <span class="countries-custom-option">🇦🇺 Australia</span>
+          <span class="countries-custom-option">🇫🇷 France</span>
+        </div>
+      </div>
+    </div>
+    <div class="countries-unemployment-div" id="countries-unemployment-usa">
+      <h1 class="countries-unemployment-heading">
+        The Bureau of Labor Statistics releases U1, U2, U3, U4, U5 and U6 rates
+        on a montly basis, they are:
+      </h1>
+      <div class="countries-unemployment-rate-data-div">
+        <ul class="countries-unemployment-u-list">
+          <li>
+            <div class="countries-tooltip" onclick="tooltipMobile(0)">
+              U1:
+              <!-- prettier-ignore -->
+              <span class="countries-tooltip-text">
+                People who have been unemployed for 15 weeks or more. \(\frac{\textnormal{Unemployed (for 15+ Weeks)}}{\textnormal{Labor Force}} \times 100\)
+              </span>
+            </div>
+            <span>3.3%</span>
+          </li>
+          <li>
+            <div class="countries-tooltip" onclick="tooltipMobile(1)">
+              U2:
+              <!-- prettier-ignore -->
+              <span class="countries-tooltip-text">
+                People who are unemployed, this includes temporary and seasonal jobs. \(\frac{\textnormal{Job Losers}}{\textnormal{Labor Force}} \times 100\)
+              </span>
+            </div>
+            <span>3.6%</span>
+          </li>
+          <li>
+            <div class="countries-tooltip" onclick="tooltipMobile(2)">
+              U3:
+              <!-- prettier-ignore -->
+              <span class="countries-tooltip-text">
+                People who are unemployed and are actively searching for jobs.
+                Most common figure of unemployment. \(\frac{\textnormal{Unemployed}}{\textnormal{Labor Force}} \times 100\)
+              </span>
+            </div>
+            <span>5.9%</span>
+          </li>
+          <li>
+            <div class="countries-tooltip" onclick="tooltipMobile(3)">
+              U4:
+              <!-- prettier-ignore -->
+              <span class="countries-tooltip-text">
+                People who are unemployed and discouraged. \(\frac{\textnormal{Unemployed + Discouraged Workers}}{\textnormal{Labor Force + Discouraged Workers}} \times 100\) 
+              </span>
+            </div>
+            <span>6.2%</span>
+          </li>
+          <li>
+            <div class="countries-tooltip" onclick="tooltipMobile(4)">
+              U5:
+              <!-- prettier-ignore -->
+              <span class="countries-tooltip-text">
+                People who are unemployed and marginally
+                attached. \(\frac{\textnormal{Unemployed + Marginally Attached}}{\textnormal{Labor Force + Marginally Attached}} \times 100\)
+              </span>
+            </div>
+            <span>6.9%</span>
+          </li>
+          <li>
+            <div class="countries-tooltip" onclick="tooltipMobile(5)">
+              U6:
+              <!-- prettier-ignore -->
+              <span class="countries-tooltip-text">
+                Everyone who is not included in the U3 rate. Such as discouraged
+                and underemployed workers. \(\frac{\textnormal{Unemployed + Marginally Attached + Part Time}}{\textnormal{Labor Force + Marginally Attached}} \times 100 \)
+              </span>
+            </div>
+            <span>9.8%</span>
+          </li>
+        </ul>
+        <div class="countries-unemployment-data-source-div">
+          <h2>Sources:</h2>
+          <ol>
+            <a
+              target="_blank"
+              href="https://www.bls.gov/news.release/empsit.t15.htm"
+              ><li>
+                Table A-15. Alternative measures of labor underutilization
+              </li>
+            </a>
+            <a target="_blank" href="https://fred.stlouisfed.org/series/U1RATE"
+              ><li>
+                Percent of Civilian Labor Force Unemployed 15 Weeks and Over
+                (U-1)
+              </li>
+            </a>
+            <a target="_blank" href="https://fred.stlouisfed.org/series/U2RATE"
+              ><li>Unemployment Rate - Job Losers (U-2)</li>
+            </a>
+            <a target="_blank" href="https://fred.stlouisfed.org/series/UNRATE"
+              ><li>Unemployment Rate (UNRATE)</li>
+            </a>
+            <a target="_blank" href="https://fred.stlouisfed.org/series/U4RATE"
+              ><li>
+                Total Unemployed Plus Discouraged Workers, as a Percent of the
+                Civilian Labor Force Plus Discouraged Workers (U-4)
+              </li>
+            </a>
+            <a target="_blank" href="https://fred.stlouisfed.org/series/U5RATE"
+              ><li>
+                Total Unemployed, Plus Discouraged Workers, Plus All Other
+                Persons Marginally Attached to the Labor Force, as a Percent of
+                the Civilian Labor Force Plus All Persons Marginally Attached to
+                the Labor Force (U-5)
+              </li>
+            </a>
+            <a target="_blank" href="https://fred.stlouisfed.org/series/U6RATE"
+              ><li>
+                Total Unemployed, Plus All Persons Marginally Attached to the
+                Labor Force, Plus Total Employed Part Time for Economic Reasons,
+                as a Percent of the Civilian Labor Force Plus All Persons
+                Marginally Attached to the Labor Force (U-6)
+              </li>
+            </a>
+          </ol>
+        </div>
+      </div>
+      <div id="countries-unemployment-graph-div">
+        <div
+          class="
+            countries-custom-select-wrapper
+            countries-unemployment-data-custom-select-wrapper
+          "
+        >
+          <div
+            class="
+              countries-custom-select countries-unemployment-data-custom-select
+            "
+          >
+            <div
+              class="
+                countries-custom-select__trigger
+                countries-unemployment-data-custom-select__trigger
+              "
+            >
+              <span
+                class="
+                  countries-span countries-unemployment-data-countries-span
+                "
+                id="countries-unemployment-graph-span"
+                >Select a data point</span
+              >
+              <div
+                class="
+                  countries-arrow countries-unemployment-data-countries-arrow
+                "
+              ></div>
+            </div>
+            <div
+              class="
+                countries-custom-options
+                countries-unemployment-data-custom-options
+              "
+            >
+              <span
+                class="
+                  countries-custom-option
+                  countries-unemployment-data-custom-option
+                  selected
+                  none
+                "
+              ></span>
+              <span
+                class="
+                  countries-custom-option
+                  countries-unemployment-data-custom-option
+                "
+                id="countries-unemployment-graph-span-u1"
+                >Level 1</span
+              >
+              <span
+                class="
+                  countries-custom-option
+                  countries-unemployment-data-custom-option
+                "
+                id="countries-unemployment-graph-span-u2"
+                >Level 2</span
+              >
+              <span
+                class="
+                  countries-custom-option
+                  countries-unemployment-data-custom-option
+                "
+                id="countries-unemployment-graph-span-u3"
+                >Level 3</span
+              >
+              <span
+                class="
+                  countries-custom-option
+                  countries-unemployment-data-custom-option
+                "
+                id="countries-unemployment-graph-span-u4"
+                >Level 4</span
+              >
+              <span
+                class="
+                  countries-custom-option
+                  countries-unemployment-data-custom-option
+                "
+                id="countries-unemployment-graph-span-u5"
+                >Level 5</span
+              >
+              <span
+                class="
+                  countries-custom-option
+                  countries-unemployment-data-custom-option
+                "
+                id="countries-unemployment-graph-span-u6"
+                >Level 6</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="countries-graph" id="countries-graph-u1"></div>
+        <div class="countries-graph" id="countries-graph-u2"></div>
+        <div class="countries-graph" id="countries-graph-u3"></div>
+        <div class="countries-graph" id="countries-graph-u4"></div>
+        <div class="countries-graph" id="countries-graph-u5"></div>
+        <div class="countries-graph" id="countries-graph-u6"></div>
+      </div>
+    </div>
+    <div class="countries-unemployment-div" id="countries-unemployment-uk">
+      <h1 class="countries-unemployment-heading">
+        The ONS and other sources gives useful numbers that we can use to
+        calculate the U rates of unemployment.
+      </h1>
+      <div class="countries-unemployment-rate-data-div">
+        <ul class="countries-unemployment-u-list">
+          <li>
+            <div class="countries-tooltip" onclick="tooltipMobile(5-1)">
+              U1:
+              <!-- prettier-ignore -->
+              <span class="countries-tooltip-text">
+              People who have been unemployed for 15 weeks or more. \(\frac{\textnormal{Unemployed (for 15+ Weeks)}}{\textnormal{Labor Force}} \times 100\)
+            </span>
+            </div>
+            <span> ~3.1% </span>
+            <!--1637000/53557000*100 = -->
+          </li>
+          <li>
+            <div class="countries-tooltip" onclick="tooltipMobile(5-1)">
+              U2:
+              <!-- prettier-ignore -->
+              <span class="countries-tooltip-text">
+              People who are unemployed, this includes temporary and seasonal
+              jobs. \(\frac{\textnormal{Job Losers}}{\textnormal{Labor Force}} \times 100\)
+            </span>
+            </div>
+            <span>N/A</span>
+          </li>
+          <li>
+            <div class="countries-tooltip" onclick="tooltipMobile(5-1)">
+              U3:
+              <!-- prettier-ignore -->
+              <span class="countries-tooltip-text"
+              >People who are unemployed and are actively searching for jobs.
+              Most common figure of unemployment. \(\frac{\textnormal{Unemployed}}{\textnormal{Labor Force}} \times 100\)
+            </span>
+            </div>
+            <span>4.8%</span>
+          </li>
+          <li>
+            <div class="countries-tooltip" onclick="tooltipMobile(5-1)">
+              U4:
+              <!-- prettier-ignore -->
+              <span class="countries-tooltip-text">
+              People who are unemployed and discouraged. \(\frac{\textnormal{Unemployed + Discouraged Workers}}{\textnormal{Labor Force + Discouraged Workers}} \times 100\) 
+            </span>
+            </div>
+            <span> ~16.6% </span>
+          </li>
+          <li>
+            <div class="countries-tooltip" onclick="tooltipMobile(5-1)">
+              U5:
+              <!-- prettier-ignore -->
+              <span class="countries-tooltip-text">
+              People who are unemployed and marginally
+              attached. \(\frac{\textnormal{Unemployed + Marginally Attached}}{\textnormal{Labor Force + Marginally Attached}} \times 100\)
+            </span>
+            </div>
+            <span>N/A</span>
+          </li>
+          <li>
+            <div class="countries-tooltip" onclick="tooltipMobile(5-1)">
+              U6:
+              <!-- prettier-ignore -->
+              <span class="countries-tooltip-text">
+              Everyone who is not included in the U3 rate. Such as discouraged
+              and underemployed workers. \(\frac{\textnormal{Unemployed + Marginally Attached + Part Time}}{\textnormal{Labor Force + Marginally Attached}} \times 100 \)
+            </span>
+            </div>
+            <span>N/A</span>
+          </li>
+        </ul>
+        <div class="countries-unemployment-data-source-div">
+          <h2>Sources:</h2>
+          <ol>
+            <a
+              target="_blank"
+              href="https://www.economy.com/united-kingdom/labor-force"
+            >
+              <li>United Kingdom - Labor Force</li>
+            </a>
+            <a
+              target="_blank"
+              href="https://www.ons.gov.uk/employmentandlabourmarket/peoplenotinwork/economicinactivity/timeseries/lf77/lms"
+            >
+              <li>
+                LFS: Econ. inactivity reasons: Discouraged workers: UK: 16-64:%
+              </li>
+            </a>
+            <a
+              target="_blank"
+              href="https://www.ons.gov.uk/employmentandlabourmarket/peoplenotinwork/economicinactivity/timeseries/lf2m/lms"
+            >
+              <li>
+                LFS: Economically Inactive: UK: All: Aged 16-64: Thousands: SA
+              </li>
+            </a>
+            <a
+              target="_blank"
+              href="https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/bulletins/uklabourmarket/july2021"
+              ><li>Labour market overview, UK: July 2021</li>
+            </a>
+          </ol>
+          <h2>Calculations:</h2>
+          <ul>
+            <li>
+              U1: According to
+              <a
+                href="_blank"
+                href="https://www.economy.com/united-kingdom/labor-force"
+                >Source 1</a
+              >, the labour force of the U.K. is 53,557,000 and the number of
+              unemployed people is 1,637,000. Thus,
+              \(\frac{1,637,000}{53,557,000} \times 100 = 3.1 \%\). The reason
+              why there is a tilda sign is because I am unsure if this number is
+              for 15+ weeks and over.
+            </li>
+            <li>
+              U2: Unfourtunately, I was unable to find job losers or a statistic
+              similar to that for the U.K.
+            </li>
+            <li>U3: This is given by the Office of Labour Statistics.</li>
+            <li>
+              U4: According to
+              <a
+                target="_blank"
+                href="https://www.ons.gov.uk/employmentandlabourmarket/peoplenotinwork/economicinactivity/timeseries/lf77/lms"
+                >Source 2</a
+              >, during March-May 2021, 0.8% of all 16-64 year olds who were
+              economically inactive said that they were discouraged in the
+              Labour Force Survey. According to
+              <a
+                href="https://www.ons.gov.uk/employmentandlabourmarket/peoplenotinwork/economicinactivity/timeseries/lf2m/lms"
+                >Source 3</a
+              >, there were 8,806,000 economicaly inactive people during
+              March-May 2021. Thus, \(\frac{8,806,000 + 70448 }{53,557,000 +
+              70448 } \times 100 = 16.6 \%\). The reason why there is a tilda
+              sign is because I am using economically inactive, not unemployed.
+            </li>
+            <li>
+              U5: While I was able to find those who were marginally attached,
+              the data is two years old. Thus, I am unable to provide an
+              accurate mesaurement of the U5 rate for the U.K.
+            </li>
+            <li>
+              U6: Due to the missing variable of those who are marginally
+              attatched, I am unable to calculate the U6 rate.
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div id="countries-unemployment-graph-div">
+        <div
+          class="
+            countries-custom-select-wrapper
+            countries-unemployment-data-custom-select-wrapper
+          "
+        >
+          <div
+            class="
+              countries-custom-select countries-unemployment-data-custom-select
+            "
+          >
+            <div
+              class="
+                countries-custom-select__trigger
+                countries-unemployment-data-custom-select__trigger
+              "
+            >
+              <span
+                class="
+                  countries-span countries-unemployment-data-countries-span
+                "
+                id="countries-unemployment-graph-span"
+                >Graph Coming Soon</span
+              >
+              <!-- <div
+                class="
+                  countries-arrow countries-unemployment-data-countries-arrow
+                "
+              ></div> -->
+            </div>
+            <div
+              class="
+                countries-custom-options
+                countries-unemployment-data-custom-options
+              "
+            >
+              <span
+                class="
+                  countries-custom-option
+                  countries-unemployment-data-custom-option
+                  selected
+                  none
+                "
+              ></span>
+              <span
+                class="
+                  countries-custom-option
+                  countries-unemployment-data-custom-option
+                "
+                id="countries-unemployment-graph-span-u1"
+                >Level 1</span
+              >
+              <span
+                class="
+                  countries-custom-option
+                  countries-unemployment-data-custom-option
+                "
+                id="countries-unemployment-graph-span-u2"
+                >Level 2</span
+              >
+              <span
+                class="
+                  countries-custom-option
+                  countries-unemployment-data-custom-option
+                "
+                id="countries-unemployment-graph-span-u3"
+                >Level 3</span
+              >
+              <span
+                class="
+                  countries-custom-option
+                  countries-unemployment-data-custom-option
+                "
+                id="countries-unemployment-graph-span-u4"
+                >Level 4</span
+              >
+              <span
+                class="
+                  countries-custom-option
+                  countries-unemployment-data-custom-option
+                "
+                id="countries-unemployment-graph-span-u5"
+                >Level 5</span
+              >
+              <span
+                class="
+                  countries-custom-option
+                  countries-unemployment-data-custom-option
+                "
+                id="countries-unemployment-graph-span-u6"
+                >Level 6</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="countries-graph" id="countries-graph-u1"></div>
+        <div class="countries-graph" id="countries-graph-u2"></div>
+        <div class="countries-graph" id="countries-graph-u3"></div>
+        <div class="countries-graph" id="countries-graph-u4"></div>
+        <div class="countries-graph" id="countries-graph-u5"></div>
+        <div class="countries-graph" id="countries-graph-u6"></div>
+      </div>
+    </div>
+    <div class="countries-unemployment-div" id="countries-unemployment-can">
+      <h1 class="countries-unemployment-heading">
+        Statistics Canada (Statistique Canada) gives many useful numbers.
+        However, they do not give U rates of unemployment directly. So, we'll
+        have to calculate them.
+      </h1>
+      <div class="countries-unemployment-rate-data-div">
+        <ul class="countries-unemployment-u-list">
+          <li>
+            <div class="countries-tooltip" onclick="tooltipMobile(5-1)">
+              U1:
+              <!-- prettier-ignore -->
+              <span class="countries-tooltip-text">
+                People who have been unemployed for 15 weeks or more. \(\frac{\textnormal{Unemployed (for 15+ Weeks)}}{\textnormal{Labor Force}} \times 100\)
+              </span>
+            </div>
+            <span> ~3.1% </span>
+            <!--1637000/53557000*100 = -->
+          </li>
+          <li>
+            <div class="countries-tooltip" onclick="tooltipMobile(5-1)">
+              U2:
+              <!-- prettier-ignore -->
+              <span class="countries-tooltip-text">
+                People who are unemployed, this includes temporary and seasonal
+                jobs. \(\frac{\textnormal{Job Losers}}{\textnormal{Labor Force}} \times 100\)
+              </span>
+            </div>
+            <span>N/A</span>
+          </li>
+          <li>
+            <div class="countries-tooltip" onclick="tooltipMobile(5-1)">
+              U3:
+              <!-- prettier-ignore -->
+              <span class="countries-tooltip-text"
+                >People who are unemployed and are actively searching for jobs.
+                Most common figure of unemployment. \(\frac{\textnormal{Unemployed}}{\textnormal{Labor Force}} \times 100\)
+              </span>
+            </div>
+            <span>4.8%</span>
+          </li>
+          <li>
+            <div class="countries-tooltip" onclick="tooltipMobile(5-1)">
+              U4:
+              <!-- prettier-ignore -->
+              <span class="countries-tooltip-text">
+                People who are unemployed and discouraged. \(\frac{\textnormal{Unemployed + Discouraged Workers}}{\textnormal{Labor Force + Discouraged Workers}} \times 100\) 
+              </span>
+            </div>
+            <span> ~16.6% </span>
+          </li>
+          <li>
+            <div class="countries-tooltip" onclick="tooltipMobile(5-1)">
+              U5:
+              <!-- prettier-ignore -->
+              <span class="countries-tooltip-text">
+                People who are unemployed and marginally
+                attached. \(\frac{\textnormal{Unemployed + Marginally Attached}}{\textnormal{Labor Force + Marginally Attached}} \times 100\)
+              </span>
+            </div>
+            <span>N/A</span>
+          </li>
+          <li>
+            <div class="countries-tooltip" onclick="tooltipMobile(5-1)">
+              U6:
+              <!-- prettier-ignore -->
+              <span class="countries-tooltip-text">
+                Everyone who is not included in the U3 rate. Such as discouraged
+                and underemployed workers. \(\frac{\textnormal{Unemployed + Marginally Attached + Part Time}}{\textnormal{Labor Force + Marginally Attached}} \times 100 \)
+              </span>
+            </div>
+            <span>N/A</span>
+          </li>
+        </ul>
+        <div class="countries-unemployment-data-source-div">
+          <h2>Sources:</h2>
+          <ol>
+            <a
+              target="_blank"
+              href="https://www.economy.com/united-kingdom/labor-force"
+            >
+              <li>United Kingdom - Labor Force</li>
+            </a>
+            <a
+              target="_blank"
+              href="https://www.ons.gov.uk/employmentandlabourmarket/peoplenotinwork/economicinactivity/timeseries/lf77/lms"
+            >
+              <li>
+                LFS: Econ. inactivity reasons: Discouraged workers: UK: 16-64:%
+              </li>
+            </a>
+            <a
+              target="_blank"
+              href="https://www.ons.gov.uk/employmentandlabourmarket/peoplenotinwork/economicinactivity/timeseries/lf2m/lms"
+            >
+              <li>
+                LFS: Economically Inactive: UK: All: Aged 16-64: Thousands: SA
+              </li>
+            </a>
+            <a
+              target="_blank"
+              href="https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/bulletins/uklabourmarket/july2021"
+              ><li>Labour market overview, UK: July 2021</li>
+            </a>
+          </ol>
+          <h2>Calculations:</h2>
+          <ul>
+            <li>
+              U1: According to
+              <a
+                href="_blank"
+                href="https://www.economy.com/united-kingdom/labor-force"
+                >Source 1</a
+              >, the labour force of the U.K. is 53,557,000 and the number of
+              unemployed people is 1,637,000. Thus,
+              \(\frac{1,637,000}{53,557,000} \times 100 = 3.1 \%\). The reason
+              why there is a tilda sign is because I am unsure if this number is
+              for 15+ weeks and over.
+            </li>
+            <li>
+              U2: Unfourtunately, I was unable to find job losers or a statistic
+              similar to that for the U.K.
+            </li>
+            <li>U3: This is given by the Office of Labour Statistics.</li>
+            <li>
+              U4: According to
+              <a
+                target="_blank"
+                href="https://www.ons.gov.uk/employmentandlabourmarket/peoplenotinwork/economicinactivity/timeseries/lf77/lms"
+                >Source 2</a
+              >, during March-May 2021, 0.8% of all 16-64 year olds who were
+              economically inactive said that they were discouraged in the
+              Labour Force Survey. According to
+              <a
+                href="https://www.ons.gov.uk/employmentandlabourmarket/peoplenotinwork/economicinactivity/timeseries/lf2m/lms"
+                >Source 3</a
+              >, there were 8,806,000 economicaly inactive people during
+              March-May 2021. Thus, \(\frac{8,806,000 + 70448 }{53,557,000 +
+              70448 } \times 100 = 16.6 \%\). The reason why there is a tilda
+              sign is because I am using economically inactive, not unemployed.
+            </li>
+            <li>
+              U5: While I was able to find those who were marginally attached,
+              the data is two years old. Thus, I am unable to provide an
+              accurate mesaurement of the U5 rate for the U.K.
+            </li>
+            <li>
+              U6: Due to the missing variable of those who are marginally
+              attatched, I am unable to calculate the U6 rate.
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div id="countries-unemployment-graph-div">
+        <div
+          class="
+            countries-custom-select-wrapper
+            countries-unemployment-data-custom-select-wrapper
+          "
+        >
+          <div
+            class="
+              countries-custom-select countries-unemployment-data-custom-select
+            "
+          >
+            <div
+              class="
+                countries-custom-select__trigger
+                countries-unemployment-data-custom-select__trigger
+              "
+            >
+              <span
+                class="
+                  countries-span countries-unemployment-data-countries-span
+                "
+                id="countries-unemployment-graph-span"
+                >Graph Coming Soon</span
+              >
+              <!-- <div
+                  class="
+                    countries-arrow countries-unemployment-data-countries-arrow
+                  "
+                ></div> -->
+            </div>
+            <div
+              class="
+                countries-custom-options
+                countries-unemployment-data-custom-options
+              "
+            >
+              <span
+                class="
+                  countries-custom-option
+                  countries-unemployment-data-custom-option
+                  selected
+                  none
+                "
+              ></span>
+              <span
+                class="
+                  countries-custom-option
+                  countries-unemployment-data-custom-option
+                "
+                id="countries-unemployment-graph-span-u1"
+                >Level 1</span
+              >
+              <span
+                class="
+                  countries-custom-option
+                  countries-unemployment-data-custom-option
+                "
+                id="countries-unemployment-graph-span-u2"
+                >Level 2</span
+              >
+              <span
+                class="
+                  countries-custom-option
+                  countries-unemployment-data-custom-option
+                "
+                id="countries-unemployment-graph-span-u3"
+                >Level 3</span
+              >
+              <span
+                class="
+                  countries-custom-option
+                  countries-unemployment-data-custom-option
+                "
+                id="countries-unemployment-graph-span-u4"
+                >Level 4</span
+              >
+              <span
+                class="
+                  countries-custom-option
+                  countries-unemployment-data-custom-option
+                "
+                id="countries-unemployment-graph-span-u5"
+                >Level 5</span
+              >
+              <span
+                class="
+                  countries-custom-option
+                  countries-unemployment-data-custom-option
+                "
+                id="countries-unemployment-graph-span-u6"
+                >Level 6</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="countries-graph" id="countries-graph-u1"></div>
+        <div class="countries-graph" id="countries-graph-u2"></div>
+        <div class="countries-graph" id="countries-graph-u3"></div>
+        <div class="countries-graph" id="countries-graph-u4"></div>
+        <div class="countries-graph" id="countries-graph-u5"></div>
+        <div class="countries-graph" id="countries-graph-u6"></div>
+      </div>
+    </div>
+    <div class="countries-unemployment-div" id="countries-unemployment-ger">
+      <h1 class="soon">Coming Soon.</h1>
+    </div>
+    <div class="countries-unemployment-div" id="countries-unemployment-nz">
+      <h1 class="soon">Coming Soon.</h1>
+    </div>
+    <div class="countries-unemployment-div" id="countries-unemployment-aus">
+      <h1 class="soon">Coming Soon.</h1>
+    </div>
+    <div class="countries-unemployment-div" id="countries-unemployment-fr">
+      <h1 class="soon">Coming Soon.</h1>
+    </div>
+    <div id="footer">
+      <a id="nostylelink" href="https://arjunyadav.net" target="_blank">
+        made with ❤️ by arjun<span id="footerdot">.</span>
+      </a>
+      <div class="footerextra"><a href="./disclaimer">Disclaimer</a></div>
+      <div class="footerextra"><a href="./inspiration">Inspiration</a></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="youthreescript.js"></script>
+  </body>
+</html>
