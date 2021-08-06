@@ -391,6 +391,8 @@ iframe {
   color: #001aff;
 }
 
+/* 404 styling is in the HTML file itself. */
+
 /* Responsiveness */
 @media (max-width: 1060px) {
   #opening {
