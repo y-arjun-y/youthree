@@ -78,6 +78,8 @@ function openingTransition() {
   }, 1000);
 }
 
+function countriesTransition() {}
+
 /* Custom Select */
 document
   .querySelector(".countries-custom-select-wrapper")
