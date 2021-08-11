@@ -55,13 +55,15 @@
       </div>
     </div>
     <div class="countries-unemployment-div" id="countries-unemployment-usa">
-      <h1 class="countries-unemployment-heading">
-        The Bureau of Labor Statistics releases U1, U2, U3, U4, U5 and U6 rates
-        on a montly basis, they are:
-      </h1>
+      <h2 class="countries-unemployment-heading">
+        The United States of America, being America, does not agree with rest of
+        the world on uniform unemployment rates. So, it has its own unemployment
+        rates.
+      </h2>
       <div class="countries-unemployment-rate-data-div">
         <ul class="countries-unemployment-u-list">
           <li>
+            <h2 id="americaheading">Bureau of Labor Statistics:</h2>
             <div class="countries-tooltip" onclick="tooltipMobile(0)">
               U1:
               <!-- prettier-ignore -->
@@ -124,6 +126,59 @@
             </div>
             <span>9.8%</span>
           </li>
+          <h2 id="americaheading" style="padding-top: 1em">
+            International Labour Organization
+          </h2>
+          <div
+            class="countries-unemployment-div"
+            id="countries-unemployment-usa"
+          >
+            <div class="countries-unemployment-rate-data-div">
+              <ul class="countries-unemployment-u-list">
+                <li>
+                  <div class="countries-tooltip" onclick="tooltipMobile(0)">
+                    LU1:
+                    <!-- prettier-ignore -->
+                    <span class="countries-tooltip-text">
+                      People who have been unemployed for 15 weeks or more. \(\frac{\textnormal{Unemployed (for 15+ Weeks)}}{\textnormal{Labor Force}} \times 100\)
+                    </span>
+                  </div>
+                  <span>8.1%</span>
+                </li>
+                <li>
+                  <div class="countries-tooltip" onclick="tooltipMobile(1)">
+                    LU2:
+                    <!-- prettier-ignore -->
+                    <span class="countries-tooltip-text">
+                      People who are unemployed, this includes temporary and seasonal jobs. \(\frac{\textnormal{Job Losers}}{\textnormal{Labor Force}} \times 100\)
+                    </span>
+                  </div>
+                  <span>10%</span>
+                </li>
+                <li>
+                  <div class="countries-tooltip" onclick="tooltipMobile(2)">
+                    LU3:
+                    <!-- prettier-ignore -->
+                    <span class="countries-tooltip-text">
+                      People who are unemployed and are actively searching for jobs.
+                      Most common figure of unemployment. \(\frac{\textnormal{Unemployed}}{\textnormal{Labor Force}} \times 100\)
+                    </span>
+                  </div>
+                  <span>9%</span>
+                </li>
+                <li>
+                  <div class="countries-tooltip" onclick="tooltipMobile(3)">
+                    LU4:
+                    <!-- prettier-ignore -->
+                    <span class="countries-tooltip-text">
+                      People who are unemployed and discouraged. \(\frac{\textnormal{Unemployed + Discouraged Workers}}{\textnormal{Labor Force + Discouraged Workers}} \times 100\) 
+                    </span>
+                  </div>
+                  <span>11%</span>
+                </li>
+              </ul>
+            </div>
+          </div>
         </ul>
         <div class="countries-unemployment-data-source-div">
           <h2>Sources:</h2>
@@ -167,6 +222,15 @@
                 Labor Force, Plus Total Employed Part Time for Economic Reasons,
                 as a Percent of the Civilian Labor Force Plus All Persons
                 Marginally Attached to the Labor Force (U-6)
+              </li>
+            </a>
+            <a
+              target="_blank"
+              href="https://ilostat.ilo.org/topics/unemployment-and-labour-underutilization/"
+            >
+              <li>
+                Statistics on unemployment and supplementary measures of labour
+                underutilization
               </li>
             </a>
           </ol>

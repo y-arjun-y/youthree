@@ -308,6 +308,10 @@ iframe {
   gap: 10em;
 }
 
+#americaheading {
+  font-size: 0.7em;
+}
+
 .countries-unemployment-data-source-div {
   position: relative;
   bottom: -0.8em;
