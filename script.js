@@ -78,7 +78,10 @@ function openingTransition() {
   }, 1000);
 }
 
-function countriesTransition() {}
+document.getElementById("countriesbody").style.opacity = 0;
+setTimeout(function () {
+  document.getElementById("countriesbody").style.opacity = 100;
+}, 10);
 
 /* Custom Select */
 document
