@@ -74,7 +74,7 @@ function openingTransition() {
 
   setTimeout(function () {
     document.getElementById("openingbutton").style.display = "none";
-    window.open("./countries.html", "_self");
+    window.open("./countries", "_self");
   }, 1000);
 }
 
