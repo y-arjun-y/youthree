@@ -172,7 +172,7 @@ window.addEventListener("click", function (e) {
       "none";
     document.getElementById("countries-unemployment-fr").style.display = "none";
     document.getElementById("countries-unemployment-nz").style.display = "none";
-    document.getElementById("footer").style.bottom = "-450px";
+    document.getElementById("footer").style.bottom = "-800px";
   }
 
   if (country.includes("U.K.")) {
@@ -188,7 +188,7 @@ window.addEventListener("click", function (e) {
       "none";
     document.getElementById("countries-unemployment-nz").style.display = "none";
     document.getElementById("countries-unemployment-fr").style.display = "none";
-    document.getElementById("footer").style.bottom = "-450px";
+    document.getElementById("footer").style.bottom = "-3px";
   }
 
   if (country.includes("Canada")) {
@@ -203,7 +203,7 @@ window.addEventListener("click", function (e) {
       "none";
     document.getElementById("countries-unemployment-fr").style.display = "none";
     document.getElementById("countries-unemployment-nz").style.display = "none";
-    document.getElementById("footer").style.bottom = "-450px";
+    document.getElementById("footer").style.bottom = "-3px";
   }
 
   if (country.includes("Germany")) {

@@ -209,6 +209,12 @@ body {
   white-space: nowrap;
 }
 
+.countries-unemployment-u-list-ilo-america {
+  list-style: none;
+  position: relative;
+  right: 1.2em;
+}
+
 .soon {
   margin-left: 22px;
   font-size: 1.8em;
@@ -440,7 +446,8 @@ iframe {
     width: 4.3em;
   }
 
-  .countries-unemployment-u-list {
+  .countries-unemployment-u-list,
+  .countries-unemployment-u-list-ilo-america {
     text-align: center;
     padding-right: 2.2em;
   }
