@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html
+  xmlns:th="http://www.thymeleaf.org"
+  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+>
+  <head th:include="fragments/common :: commonFragment">
+    <meta charset="UTF-8" />
+    <link
+      rel="shortcut-icon"
+      th:href="@{/assets/img/favicon.png}"
+      type="image/x-icon"
+    />
+    <title th:text="#{app.name}"> </title>
+    <style type="text/css">
+      .content {
+        display: -webkit-flex;
+        display: flex;
+        height: 100vh;
+        width: 100%;
+        overflow: auto;
+      }
+
+      .header,
+      .footer {
+        overflow: hidden;
+        position: fixed;
+      }
+      .page-content {
+        overflow: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div th:id="defaultFragment" th:fragment="defaultFragment">
+      <div id="header" th:replace="fragments/header :: headerFragment"></div>
+      <div class="main-container container-fluid">
+        <div class="page-container">
+          <div
+            id="sidebar"
+            th:replace="fragments/sidebar :: sidebarFragment"
+          ></div>
+          <div class="page-content">
+            <div class="page-body">
+              <div id="content" layout:fragment="content">
+                AAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+              </div>
+            </div>
+          </div>
+        </div>
+        <div th:replace="fragments/footer :: footerFragment"></div>
+      </div>
+    </div>
+  </body>
+</html>

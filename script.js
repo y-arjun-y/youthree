@@ -285,7 +285,6 @@ document
       "none";
     document.getElementsByClassName("countries-graph")[5].style.display =
       "none";
-
     var margin = { top: 30, right: 120, bottom: 30, left: 50 },
       width = 960 - margin.left - margin.right,
       height = 500 - margin.top - margin.bottom,

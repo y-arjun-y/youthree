@@ -39,6 +39,11 @@ body {
 }
 
 /* Countries */
+#countriesbody {
+  min-height: fit-content;
+  overflow: auto;
+}
+
 .countries-custom-select-wrapper {
   position: relative;
   user-select: none;
@@ -374,6 +379,13 @@ iframe {
   font-weight: bold;
 }
 
+.svg-graph-background {
+  height: 500px;
+  width: 1000px;
+  background-color: #fefbea;
+  overflow: hidden;
+}
+
 /* Footer */
 #footer {
   display: flex;
@@ -385,6 +397,7 @@ iframe {
   gap: 1em;
   margin-left: 0.5em;
   white-space: nowrap;
+  z-index: 99;
 }
 
 .footerextra {
@@ -428,6 +441,12 @@ iframe {
     position: relative;
     right: 34em;
     bottom: 11em;
+  }
+
+  .svg-graph-background {
+    height: 300px;
+    width: 1000px;
+    overflow: hidden;
   }
 
   .countries-unemployment-heading {
