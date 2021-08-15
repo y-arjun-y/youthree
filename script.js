@@ -285,6 +285,15 @@ document
       "none";
     document.getElementsByClassName("countries-graph")[5].style.display =
       "none";
+    document.getElementsByClassName("countries-graph")[6].style.display =
+      "none";
+    document.getElementsByClassName("countries-graph")[7].style.display =
+      "none";
+    document.getElementsByClassName("countries-graph")[8].style.display =
+      "none";
+    document.getElementsByClassName("countries-graph")[9].style.display =
+      "none";
+
     var margin = { top: 30, right: 120, bottom: 30, left: 50 },
       width = 960 - margin.left - margin.right,
       height = 500 - margin.top - margin.bottom,
@@ -446,6 +455,14 @@ document
     document.getElementsByClassName("countries-graph")[4].style.display =
       "none";
     document.getElementsByClassName("countries-graph")[5].style.display =
+      "none";
+    document.getElementsByClassName("countries-graph")[6].style.display =
+      "none";
+    document.getElementsByClassName("countries-graph")[7].style.display =
+      "none";
+    document.getElementsByClassName("countries-graph")[8].style.display =
+      "none";
+    document.getElementsByClassName("countries-graph")[9].style.display =
       "none";
 
     var margin = { top: 30, right: 120, bottom: 30, left: 50 },
@@ -611,6 +628,14 @@ document
       "none";
     document.getElementsByClassName("countries-graph")[5].style.display =
       "none";
+    document.getElementsByClassName("countries-graph")[6].style.display =
+      "none";
+    document.getElementsByClassName("countries-graph")[7].style.display =
+      "none";
+    document.getElementsByClassName("countries-graph")[8].style.display =
+      "none";
+    document.getElementsByClassName("countries-graph")[9].style.display =
+      "none";
 
     var margin = { top: 30, right: 120, bottom: 30, left: 50 },
       width = 960 - margin.left - margin.right,
@@ -774,6 +799,14 @@ document
     document.getElementsByClassName("countries-graph")[4].style.display =
       "none";
     document.getElementsByClassName("countries-graph")[5].style.display =
+      "none";
+    document.getElementsByClassName("countries-graph")[6].style.display =
+      "none";
+    document.getElementsByClassName("countries-graph")[7].style.display =
+      "none";
+    document.getElementsByClassName("countries-graph")[8].style.display =
+      "none";
+    document.getElementsByClassName("countries-graph")[9].style.display =
       "none";
 
     var margin = { top: 30, right: 120, bottom: 30, left: 50 },
@@ -939,6 +972,14 @@ document
       "inline";
     document.getElementsByClassName("countries-graph")[5].style.display =
       "none";
+    document.getElementsByClassName("countries-graph")[6].style.display =
+      "none";
+    document.getElementsByClassName("countries-graph")[7].style.display =
+      "none";
+    document.getElementsByClassName("countries-graph")[8].style.display =
+      "none";
+    document.getElementsByClassName("countries-graph")[9].style.display =
+      "none";
 
     var margin = { top: 30, right: 120, bottom: 30, left: 50 },
       width = 960 - margin.left - margin.right,
@@ -1103,6 +1144,14 @@ document
       "none";
     document.getElementsByClassName("countries-graph")[5].style.display =
       "inline";
+    document.getElementsByClassName("countries-graph")[6].style.display =
+      "none";
+    document.getElementsByClassName("countries-graph")[7].style.display =
+      "none";
+    document.getElementsByClassName("countries-graph")[8].style.display =
+      "none";
+    document.getElementsByClassName("countries-graph")[9].style.display =
+      "none";
 
     var margin = { top: 30, right: 120, bottom: 30, left: 50 },
       width = 960 - margin.left - margin.right,
@@ -1248,6 +1297,531 @@ document
         focus.attr("transform", "translate(" + x(d.year) + "," + y(d.u6) + ")");
         focus.select(".countries-tooltip-date").text(dateFormatter(d.year));
         focus.select(".countries-tooltip-u6").text(formatValue(d.u6));
+      }
+    });
+  });
+
+document
+  .getElementById("countries-unemployment-graph-span-lu2")
+  .addEventListener("click", function namedListener() {
+    document.getElementsByClassName("countries-graph")[0].style.display =
+      "none";
+    document.getElementsByClassName("countries-graph")[1].style.display =
+      "none";
+    document.getElementsByClassName("countries-graph")[2].style.display =
+      "none";
+    document.getElementsByClassName("countries-graph")[3].style.display =
+      "none";
+    document.getElementsByClassName("countries-graph")[4].style.display =
+      "none";
+    document.getElementsByClassName("countries-graph")[5].style.display =
+      "none";
+    document.getElementsByClassName("countries-graph")[6].style.display =
+      "none";
+    document.getElementsByClassName("countries-graph")[7].style.display =
+      "inline";
+    document.getElementsByClassName("countries-graph")[8].style.display =
+      "none";
+    document.getElementsByClassName("countries-graph")[9].style.display =
+      "none";
+
+    var margin = { top: 30, right: 120, bottom: 30, left: 50 },
+      width = 960 - margin.left - margin.right,
+      height = 500 - margin.top - margin.bottom,
+      tooltip = { width: 100, height: 100, x: 10, y: -30 };
+
+    var parseDate = d3.time.format("%Y").parse,
+      bisectDate = d3.bisector(function (d) {
+        return d.year;
+      }).left,
+      formatValue = d3.format(","),
+      dateFormatter = d3.time.format("%Y");
+
+    var x = d3.time.scale().range([0, width]);
+
+    var y = d3.scale.linear().range([height, 0]);
+
+    var xAxis = d3.svg
+      .axis()
+      .scale(x)
+      .orient("bottom")
+      .tickFormat(d3.time.format("%Y"));
+
+    var yAxis = d3.svg
+      .axis()
+      .scale(y)
+      .orient("left")
+      .tickFormat(d3.format("s"));
+
+    var line = d3.svg
+      .line()
+      .x(function (d) {
+        return x(d.year);
+      })
+      .y(function (d) {
+        return y(d.lu2);
+      });
+
+    var svg = d3
+      .select("#countries-graph-lu2")
+      .append("svg")
+      .attr("class", "svg-graph")
+      .attr("width", "1500")
+      .attr("height", "500")
+      .append("g")
+      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    d3.tsv("data/americalu2.tsv", function (error, data) {
+      if (error) throw error;
+
+      data.forEach(function (d) {
+        d.year = parseDate(d.year);
+        d.lu2 = +d.lu2;
+      });
+
+      data.sort(function (a, b) {
+        return a.year - b.year;
+      });
+
+      x.domain([data[0].year, data[data.length - 1].year]);
+
+      y.domain(
+        d3.extent(data, function (d) {
+          return d.lu2;
+        })
+      );
+
+      svg
+        .append("g")
+        .attr("class", "x axis")
+        .attr("transform", "translate(0," + height + ")")
+        .call(xAxis)
+        .append("text")
+        .attr("y", -18)
+        .attr("x", 785)
+        .attr("dy", ".71em")
+        .style("text-anchor", "end")
+        .text("Year");
+
+      svg
+        .append("g")
+        .attr("class", "y axis")
+        .call(yAxis)
+        .append("text")
+        .attr("transform", "rotate(-90)")
+        .attr("y", 6)
+        .attr("dy", ".71em")
+        .style("text-anchor", "end")
+        .text("LU2 (in percentage)");
+
+      svg.append("path").datum(data).attr("class", "line").attr("d", line);
+
+      var focus = svg
+        .append("g")
+        .attr("class", "focus")
+        .style("display", "none");
+
+      focus.append("circle").attr("r", 5);
+
+      focus
+        .append("rect")
+        .attr("class", "countries-tooltip")
+        .attr("width", 100)
+        .attr("height", 50)
+        .attr("x", 10)
+        .attr("y", -22)
+        .attr("rx", 4)
+        .attr("ry", 4);
+
+      focus
+        .append("text")
+        .attr("class", "countries-tooltip-date")
+        .attr("x", 18)
+        .attr("y", -2);
+
+      focus.append("text").attr("x", 18).attr("y", 18).text("LU2: ");
+
+      focus
+        .append("text")
+        .attr("class", "countries-tooltip-lu2")
+        .attr("x", 50)
+        .attr("y", 18);
+
+      svg
+        .append("rect")
+        .attr("class", "overlay")
+        .attr("width", width)
+        .attr("height", height)
+        .on("mouseover", function () {
+          focus.style("display", null);
+        })
+        .on("mouseout", function () {
+          focus.style("display", "none");
+        })
+        .on("mousemove", mousemove);
+
+      function mousemove() {
+        var x0 = x.invert(d3.mouse(this)[0]),
+          i = bisectDate(data, x0, 1),
+          d0 = data[i - 1],
+          d1 = data[i],
+          d = x0 - d0.year > d1.year - x0 ? d1 : d0;
+        focus.attr(
+          "transform",
+          "translate(" + x(d.year) + "," + y(d.lu2) + ")"
+        );
+        focus.select(".countries-tooltip-date").text(dateFormatter(d.year));
+        focus.select(".countries-tooltip-lu2").text(formatValue(d.lu2));
+      }
+    });
+  });
+
+document
+  .getElementById("countries-unemployment-graph-span-lu3")
+  .addEventListener("click", function namedListener() {
+    document.getElementsByClassName("countries-graph")[0].style.display =
+      "none";
+    document.getElementsByClassName("countries-graph")[1].style.display =
+      "none";
+    document.getElementsByClassName("countries-graph")[2].style.display =
+      "none";
+    document.getElementsByClassName("countries-graph")[3].style.display =
+      "none";
+    document.getElementsByClassName("countries-graph")[4].style.display =
+      "none";
+    document.getElementsByClassName("countries-graph")[5].style.display =
+      "none";
+    document.getElementsByClassName("countries-graph")[6].style.display =
+      "none";
+    document.getElementsByClassName("countries-graph")[7].style.display =
+      "none";
+    document.getElementsByClassName("countries-graph")[8].style.display =
+      "inline";
+    document.getElementsByClassName("countries-graph")[9].style.display =
+      "none";
+
+    var margin = { top: 30, right: 120, bottom: 30, left: 50 },
+      width = 960 - margin.left - margin.right,
+      height = 500 - margin.top - margin.bottom,
+      tooltip = { width: 100, height: 100, x: 10, y: -30 };
+
+    var parseDate = d3.time.format("%Y").parse,
+      bisectDate = d3.bisector(function (d) {
+        return d.year;
+      }).left,
+      formatValue = d3.format(","),
+      dateFormatter = d3.time.format("%Y");
+
+    var x = d3.time.scale().range([0, width]);
+
+    var y = d3.scale.linear().range([height, 0]);
+
+    var xAxis = d3.svg
+      .axis()
+      .scale(x)
+      .orient("bottom")
+      .tickFormat(d3.time.format("%Y"));
+
+    var yAxis = d3.svg
+      .axis()
+      .scale(y)
+      .orient("left")
+      .tickFormat(d3.format("s"));
+
+    var line = d3.svg
+      .line()
+      .x(function (d) {
+        return x(d.year);
+      })
+      .y(function (d) {
+        return y(d.lu3);
+      });
+
+    var svg = d3
+      .select("#countries-graph-lu3")
+      .append("svg")
+      .attr("class", "svg-graph")
+      .attr("width", "1500")
+      .attr("height", "500")
+      .append("g")
+      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    d3.tsv("data/americalu3.tsv", function (error, data) {
+      if (error) throw error;
+
+      data.forEach(function (d) {
+        d.year = parseDate(d.year);
+        d.lu3 = +d.lu3;
+      });
+
+      data.sort(function (a, b) {
+        return a.year - b.year;
+      });
+
+      x.domain([data[0].year, data[data.length - 1].year]);
+
+      y.domain(
+        d3.extent(data, function (d) {
+          return d.lu3;
+        })
+      );
+
+      svg
+        .append("g")
+        .attr("class", "x axis")
+        .attr("transform", "translate(0," + height + ")")
+        .call(xAxis)
+        .append("text")
+        .attr("y", -18)
+        .attr("x", 785)
+        .attr("dy", ".71em")
+        .style("text-anchor", "end")
+        .text("Year");
+
+      svg
+        .append("g")
+        .attr("class", "y axis")
+        .call(yAxis)
+        .append("text")
+        .attr("transform", "rotate(-90)")
+        .attr("y", 6)
+        .attr("dy", ".71em")
+        .style("text-anchor", "end")
+        .text("LU3 (in percentage)");
+
+      svg.append("path").datum(data).attr("class", "line").attr("d", line);
+
+      var focus = svg
+        .append("g")
+        .attr("class", "focus")
+        .style("display", "none");
+
+      focus.append("circle").attr("r", 5);
+
+      focus
+        .append("rect")
+        .attr("class", "countries-tooltip")
+        .attr("width", 100)
+        .attr("height", 50)
+        .attr("x", 10)
+        .attr("y", -22)
+        .attr("rx", 4)
+        .attr("ry", 4);
+
+      focus
+        .append("text")
+        .attr("class", "countries-tooltip-date")
+        .attr("x", 18)
+        .attr("y", -2);
+
+      focus.append("text").attr("x", 18).attr("y", 18).text("LU3: ");
+
+      focus
+        .append("text")
+        .attr("class", "countries-tooltip-lu3")
+        .attr("x", 50)
+        .attr("y", 18);
+
+      svg
+        .append("rect")
+        .attr("class", "overlay")
+        .attr("width", width)
+        .attr("height", height)
+        .on("mouseover", function () {
+          focus.style("display", null);
+        })
+        .on("mouseout", function () {
+          focus.style("display", "none");
+        })
+        .on("mousemove", mousemove);
+
+      function mousemove() {
+        var x0 = x.invert(d3.mouse(this)[0]),
+          i = bisectDate(data, x0, 1),
+          d0 = data[i - 1],
+          d1 = data[i],
+          d = x0 - d0.year > d1.year - x0 ? d1 : d0;
+        focus.attr(
+          "transform",
+          "translate(" + x(d.year) + "," + y(d.lu3) + ")"
+        );
+        focus.select(".countries-tooltip-date").text(dateFormatter(d.year));
+        focus.select(".countries-tooltip-lu3").text(formatValue(d.lu3));
+      }
+    });
+  });
+
+document
+  .getElementById("countries-unemployment-graph-span-lu4")
+  .addEventListener("click", function namedListener() {
+    document.getElementsByClassName("countries-graph")[0].style.display =
+      "none";
+    document.getElementsByClassName("countries-graph")[1].style.display =
+      "none";
+    document.getElementsByClassName("countries-graph")[2].style.display =
+      "none";
+    document.getElementsByClassName("countries-graph")[3].style.display =
+      "none";
+    document.getElementsByClassName("countries-graph")[4].style.display =
+      "none";
+    document.getElementsByClassName("countries-graph")[5].style.display =
+      "none";
+    document.getElementsByClassName("countries-graph")[6].style.display =
+      "none";
+    document.getElementsByClassName("countries-graph")[7].style.display =
+      "none";
+    document.getElementsByClassName("countries-graph")[8].style.display =
+      "none";
+    document.getElementsByClassName("countries-graph")[9].style.display =
+      "inline";
+
+    var margin = { top: 30, right: 120, bottom: 30, left: 50 },
+      width = 960 - margin.left - margin.right,
+      height = 500 - margin.top - margin.bottom,
+      tooltip = { width: 100, height: 100, x: 10, y: -30 };
+
+    var parseDate = d3.time.format("%Y").parse,
+      bisectDate = d3.bisector(function (d) {
+        return d.year;
+      }).left,
+      formatValue = d3.format(","),
+      dateFormatter = d3.time.format("%Y");
+
+    var x = d3.time.scale().range([0, width]);
+
+    var y = d3.scale.linear().range([height, 0]);
+
+    var xAxis = d3.svg
+      .axis()
+      .scale(x)
+      .orient("bottom")
+      .tickFormat(d3.time.format("%Y"));
+
+    var yAxis = d3.svg
+      .axis()
+      .scale(y)
+      .orient("left")
+      .tickFormat(d3.format("s"));
+
+    var line = d3.svg
+      .line()
+      .x(function (d) {
+        return x(d.year);
+      })
+      .y(function (d) {
+        return y(d.lu4);
+      });
+
+    var svg = d3
+      .select("#countries-graph-lu4")
+      .append("svg")
+      .attr("class", "svg-graph")
+      .attr("width", "1500")
+      .attr("height", "500")
+      .append("g")
+      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    d3.tsv("data/americalu4.tsv", function (error, data) {
+      if (error) throw error;
+
+      data.forEach(function (d) {
+        d.year = parseDate(d.year);
+        d.lu4 = +d.lu4;
+      });
+
+      data.sort(function (a, b) {
+        return a.year - b.year;
+      });
+
+      x.domain([data[0].year, data[data.length - 1].year]);
+
+      y.domain(
+        d3.extent(data, function (d) {
+          return d.lu4;
+        })
+      );
+
+      svg
+        .append("g")
+        .attr("class", "x axis")
+        .attr("transform", "translate(0," + height + ")")
+        .call(xAxis)
+        .append("text")
+        .attr("y", -18)
+        .attr("x", 785)
+        .attr("dy", ".71em")
+        .style("text-anchor", "end")
+        .text("Year");
+
+      svg
+        .append("g")
+        .attr("class", "y axis")
+        .call(yAxis)
+        .append("text")
+        .attr("transform", "rotate(-90)")
+        .attr("y", 6)
+        .attr("dy", ".71em")
+        .style("text-anchor", "end")
+        .text("LU4 (in percentage)");
+
+      svg.append("path").datum(data).attr("class", "line").attr("d", line);
+
+      var focus = svg
+        .append("g")
+        .attr("class", "focus")
+        .style("display", "none");
+
+      focus.append("circle").attr("r", 5);
+
+      focus
+        .append("rect")
+        .attr("class", "countries-tooltip")
+        .attr("width", 100)
+        .attr("height", 50)
+        .attr("x", 10)
+        .attr("y", -22)
+        .attr("rx", 4)
+        .attr("ry", 4);
+
+      focus
+        .append("text")
+        .attr("class", "countries-tooltip-date")
+        .attr("x", 18)
+        .attr("y", -2);
+
+      focus.append("text").attr("x", 18).attr("y", 18).text("LU4: ");
+
+      focus
+        .append("text")
+        .attr("class", "countries-tooltip-lu4")
+        .attr("x", 50)
+        .attr("y", 18);
+
+      svg
+        .append("rect")
+        .attr("class", "overlay")
+        .attr("width", width)
+        .attr("height", height)
+        .on("mouseover", function () {
+          focus.style("display", null);
+        })
+        .on("mouseout", function () {
+          focus.style("display", "none");
+        })
+        .on("mousemove", mousemove);
+
+      function mousemove() {
+        var x0 = x.invert(d3.mouse(this)[0]),
+          i = bisectDate(data, x0, 1),
+          d0 = data[i - 1],
+          d1 = data[i],
+          d = x0 - d0.year > d1.year - x0 ? d1 : d0;
+        focus.attr(
+          "transform",
+          "translate(" + x(d.year) + "," + y(d.lu4) + ")"
+        );
+        focus.select(".countries-tooltip-date").text(dateFormatter(d.year));
+        focus.select(".countries-tooltip-lu4").text(formatValue(d.lu4));
       }
     });
   });
