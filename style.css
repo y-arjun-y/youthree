@@ -427,6 +427,14 @@ iframe {
     font-size: 1em;
   }
 
+  #americaheading {
+    margin-top: 4em;
+  }
+
+  .countries-unemployment-u-list-ilo-america {
+    margin-left: 3.5em;
+  }
+
   .footerextra {
     bottom: -2px;
   }
