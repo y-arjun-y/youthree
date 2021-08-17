@@ -414,11 +414,26 @@ iframe {
   color: #001aff;
 }
 
-/* 404 styling is in the HTML file itself. */
+/* 404 */
+#fourzerofour {
+  padding: 25vh 0;
+  font-family: "Space Mono";
+  text-align: center;
+  margin-top: auto;
+}
+
+#fourzerofour a {
+  color: unset;
+}
 
 /* Responsiveness */
 @media (max-width: 1060px) {
   #opening {
+    padding: 10vh 0;
+    font-size: 0.8em;
+  }
+
+  #fourzerofour {
     padding: 10vh 0;
     font-size: 0.8em;
   }
