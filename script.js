@@ -172,7 +172,7 @@ window.addEventListener("click", function (e) {
       "none";
     document.getElementById("countries-unemployment-fr").style.display = "none";
     document.getElementById("countries-unemployment-nz").style.display = "none";
-    document.getElementById("footer").style.bottom = "-800px";
+    document.getElementById("footer").style.bottom = "-850px";
   }
 
   if (country.includes("U.K.")) {

@@ -390,7 +390,7 @@ iframe {
 #footer {
   display: flex;
   position: absolute;
-  font-family: "Roboto";
+  font-family: "Space Mono";
   font-size: 1.3em;
   left: 0;
   bottom: -3px;
@@ -403,7 +403,6 @@ iframe {
 .footerextra {
   font-family: "Space Mono";
   position: relative;
-  bottom: 2px;
 }
 
 .footerextra a {
