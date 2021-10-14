@@ -159,14 +159,6 @@ window.addEventListener("click", function (e) {
     document.getElementById("countries-unemployment-usa").style.display =
       "inline";
     document.getElementById("countries-unemployment-uk").style.display = "none";
-    document.getElementById("countries-unemployment-can").style.display =
-      "none";
-    document.getElementById("countries-unemployment-ger").style.display =
-      "none";
-    document.getElementById("countries-unemployment-aus").style.display =
-      "none";
-    document.getElementById("countries-unemployment-fr").style.display = "none";
-    document.getElementById("countries-unemployment-nz").style.display = "none";
     document.getElementById("footer").style.bottom = "-850px";
   }
 
@@ -175,14 +167,6 @@ window.addEventListener("click", function (e) {
       "none";
     document.getElementById("countries-unemployment-uk").style.display =
       "inline";
-    document.getElementById("countries-unemployment-can").style.display =
-      "none";
-    document.getElementById("countries-unemployment-ger").style.display =
-      "none";
-    document.getElementById("countries-unemployment-aus").style.display =
-      "none";
-    document.getElementById("countries-unemployment-nz").style.display = "none";
-    document.getElementById("countries-unemployment-fr").style.display = "none";
     document.getElementById("footer").style.bottom = "-3px";
   }
 });
