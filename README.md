@@ -1,6 +1,8 @@
 # <a href="youthree.arjunyadav.net">youthree</a>
-<img width="1440" alt="Screenshot of the USA view of youthree" src="https://user-images.githubusercontent.com/58625220/128504833-3abec9b2-ccc7-4433-854c-bb8d84bc3574.png">
-An unemployment (U1-U6 and LU1-LU4) viewer for the United States and the United Kingdom.
+![youthree](youthree.png)
+
+# What is youthree?
+youthree is a website dedicate to the unemployment rates (U1-U6 & LU1-LU4) of the United States of America and the United Kingdom.
 
 ## What is U1-U6?
 In the U.S., the [Bureau of Labor Statistics](bls.gov) releases [alternative measures to unemployment](https://www.bls.gov/news.release/empsit.t15.htm) from U1-U6. U3 is the one you're probably the most familiar as it is the one most commonly reported.
