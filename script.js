@@ -167,7 +167,7 @@ window.addEventListener("click", function (e) {
       "none";
     document.getElementById("countries-unemployment-uk").style.display =
       "inline";
-    document.getElementById("footer").style.bottom = "-3px";
+    document.getElementById("footer").style.bottom = "0px";
   }
 });
 
